@@ -1,0 +1,35 @@
+.album-page{
+  padding: 140px 2px;
+}
+
+.album{
+  display: grid;
+  width: 100%;
+  grid-auto-rows: 200px;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-gap: 5px;
+  justify-content: center;
+  @include mq(){
+  grid-auto-rows: 100px;
+  grid-template-columns: repeat(auto-fit, 100px);
+  }
+  &__body{
+    box-sizing: border-box;
+    &__img{
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      transition: transform .3s;
+      @include mq(){
+      width: 100px;
+      height: 100px;
+      }
+      &:hover {
+        transform: scale(1.03);
+        &:after {
+        width: 0%;
+        }
+      }
+    }
+  }
+}

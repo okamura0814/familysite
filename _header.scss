@@ -1,0 +1,130 @@
+#header{
+  position: fixed;
+  width: 100%;
+  background-color: $color-blue;
+  z-index: 999;
+  .nav{
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid $color-white 1px;
+    @include mq() {
+      padding: 0 10px;
+    }
+    &__item--right{
+      &__logo{
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-weight: bold;
+        color: $color-pink;
+      }
+    }
+    &__item--center{
+      &__title{
+        color: $color-pink;
+      }
+    }
+    &__item--left{
+      display: flex;
+      &__user{
+        line-height: 65px;
+        margin: 0 10px;
+        @include mq() {
+          display: none;
+        }
+        a{
+          color: $color-pink;
+          &:hover{
+            border-bottom: solid 1px $color-pink;
+            margin-bottom: -1px;
+            color: $color-white;
+          }
+        }
+      }
+      &__userImage{
+        margin: auto;
+        img{
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: auto;
+        }
+      }
+    }
+  }
+}
+
+.sub-nav{
+  padding: 0 60px;
+  border-bottom: $color-white solid 1px;
+  @include mq(){
+    padding: 0 10px;
+  }
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 0;
+    &__item{
+    cursor: pointer;
+    list-style: none;
+      a{
+        color: $color-pink;
+        white-space: nowrap;
+        &:hover{
+          border-bottom: solid 1px $color-pink;
+          margin-bottom: -1px;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+// single,album,writing,writingCheckのページはロゴではなく戻るを表示する
+.nav__item--right__return{
+  color: $color-pink;
+  margin-right: 50px;
+  font-size: 16px;
+  a{
+    color: $color-pink;
+    &:hover{
+      border-bottom: solid 1px $color-pink;
+      margin-bottom: -1px;
+      color: $color-white;
+    }
+  }
+}
+
+// registrationページのヘッダー
+.column2-nav{
+  color: $color-pink;
+  border-bottom: $color-white solid 1px;
+  display: flex;
+  align-items: center;
+  &__left{
+    justify-content: flex-start;
+    margin-left: 20px;
+    &__return{
+      a{
+        color: $color-pink;
+        &:hover{
+          color: $color-white;
+        }
+      }
+    }
+  }
+  &__center{
+    margin: auto;
+    padding-right: 60px;
+  }
+}
+
+// loginページのヘッダー
+.login-nav{
+  text-align: center;
+  color: $color-pink;
+  border-bottom: $color-white solid 1px;
+}

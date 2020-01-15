@@ -1,0 +1,74 @@
+.cardList{
+  padding: 140px 0 20px 0;
+  width: 100%;
+  &__body{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 60px;
+    @include mq(){
+      padding: 0 10px;
+    }
+  }
+}
+.card{
+  box-sizing: border-box;
+  background-color: $color-white;
+  border-radius: 8px;
+  padding: 15px 15px 14px 15px;
+  margin: 0 20px 16px 0;
+  position: relative;
+  transition: transform .2s;
+  @include mq(){
+    padding: 10px 10px 9px 10px;
+  }
+  &:hover {
+    transform: scale(1.05);
+    &:after {
+      width: 0%;
+    }
+  }
+  @include mq('pc'){
+    width: calc(25% - 60px /4);
+    &:nth-child(4n){
+      margin-right: 0;
+    }
+  }
+  @include mq('tab'){
+    width: calc(33.3333% - 40px /3);
+    &:nth-child(3n){
+      margin-right: 0;
+    }
+    @include mq(){
+      &:nth-child(3n){
+        margin-right: 20px;
+      }
+    }
+  }
+  @include mq(){
+    width: calc(50% - 20px /2);
+    &:nth-child(2n){
+      margin-right: 0;
+    }
+  }
+  &__top{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__img{
+    // background-color: $color-white;
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  &__text{
+    font-weight: bold;
+  }
+  &__link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

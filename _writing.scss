@@ -1,0 +1,48 @@
+.writing{
+  padding: 140px 0 50px 0;
+}
+
+.btn-white{
+  @include btn($color-white,$color-blue);
+  &:hover{
+    color: $color-white;
+    background: $color-pink;
+    border-radius: 10px;
+  }
+}
+
+.diary{
+  width: 80%;
+  margin: 0 auto 20px auto;
+  &__top{
+    &__img{
+      width: 500px;
+      object-fit: cover;
+    }
+  }
+  &__body{
+    &__text{
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  &__file-upload-label{
+  @include btn($color-white,$color-blue);
+    &:hover{
+      color: $color-white;
+      background: $color-pink;
+      border-radius: 10px;
+    }
+    &__item{
+      display: none;
+    }
+  }
+  &__fileName{
+    margin-top: 20px;
+  }
+}
+
+.diaryButton{
+  width: 80%;
+  margin: auto;
+}

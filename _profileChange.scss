@@ -1,0 +1,21 @@
+.registration-item{
+  &__body__file-upload{
+  @include btn($color-blue,$color-white);
+    &:hover{
+      color: $color-white;
+      background: $color-pink;
+      border-radius: 10px;
+    }
+    &__item{
+      display: none;
+    }
+  }
+  &__fileName{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.registration-item__body__img{
+  margin-bottom: 20px;
+}

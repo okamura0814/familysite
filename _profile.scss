@@ -1,0 +1,17 @@
+// プロフィール画面の記事やコメントの表示にはsingle.html用cssを再利用しているのでここにはcssは書かれていません。編集するときはsingle.scssを編集してください。
+.profile{
+  text-align: center;
+  padding: 30px 0;
+  border-bottom: solid 1px $color-white;
+  &__img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto;
+  }
+  &__user{
+    margin-top: 30px;
+    color: $color-white;
+  }
+}

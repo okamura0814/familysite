@@ -1,0 +1,11 @@
+.footer{
+  border-top: $color-white 1px solid;
+  &__item{
+    padding: 5px 0;
+    &__title{
+      margin: 5px 0;
+      text-align: center;
+      color: $color-pink;
+    }
+  }
+}

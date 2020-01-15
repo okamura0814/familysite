@@ -1,0 +1,49 @@
+.login-page{
+  width: 100%;
+  padding: 120px 0 100px 0;
+  @include mq(){
+    padding: 90px 0 50px 0;
+  }
+}
+
+.btn-blue{
+  @include btn;
+  &:hover{
+    color: $color-white;
+    background: $color-pink;
+    border-radius: 10px;
+  }
+}
+
+.login-item{
+  width: 500px;
+  margin: auto;
+  background-color: $color-white;
+  padding: 60px 0;
+  border-radius: 30px;
+  @include mq(){
+    width: 300px;
+    padding: 30px 0;
+  }
+  &__body{
+    text-align: center;
+    &__id{
+      margin-bottom: 20px;
+    }
+    &__pass{
+      margin-bottom: 20px;
+    }
+    &__btn{
+      margin-bottom: 20px;
+    }
+    &__registration{
+      margin-bottom: 20px;
+      a{
+        color: $color-pink;
+        &:hover{
+          border-bottom: solid 1px $color-pink;
+        }
+      }
+    }
+  }
+}

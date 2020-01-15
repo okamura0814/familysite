@@ -1,0 +1,60 @@
+// single.html用css
+.single{
+  padding: 140px 0 20px 0;
+  width: 100%;
+}
+.article{
+  width: 85%;
+  margin: auto;
+  border-left: $color-white solid 1px;
+  border-right: $color-white solid 1px;
+  &__body{
+    border-bottom: $color-white solid 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &__top{
+      display: flex;
+      justify-content: space-between;
+      margin: 0 15px 0 15px;
+      &__user{
+        a{
+          color: #000;
+          &:hover{
+            color: $color-white;
+          }
+        }
+      }
+    }
+    &__img{
+      display: block;
+      width: calc(90vmin - 60px);
+      height:  calc(90vmin - 60px);
+      object-fit: cover;
+      margin: auto;
+      margin-top: 10px;
+    }
+    &__text{
+      padding-bottom: 20px;
+      margin: 20px 15px 0 15px;
+    }
+    &__commentLink{
+      margin: 20px 15px 0 15px;
+    }
+  }
+  &__comment{
+    border-bottom: $color-white solid 1px;
+    padding-bottom: 10px;
+    &__top{
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 15px 0 15px;
+    }
+    &__text{
+      margin: 10px 15px 0 15px;
+      padding-bottom: 20px;
+    }
+    &__commentLink{
+      margin: 20px 15px 0 15px;
+    }
+  }
+}

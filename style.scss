@@ -1,0 +1,121 @@
+$layout-width-inner: 1200px;
+$color-blue: #80CBC4;
+$color-white: #FFFDE7;
+$color-pink: #EC407A;
+
+$breakpoints:(
+  "sp":"screen and (max-width: 767px)",
+  "tab":"screen and(max-width: #{$layout-width-inner - 1px})",
+  // "screen and (min-width:768px)",
+  "pc":"screen and (min-width: #{$layout-width-inner})",
+);
+@mixin mq($breakpoint: sp) {
+
+  @media #{map-get($breakpoints,$breakpoint)}{
+
+    @content;
+  }
+}
+
+*{
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body{
+  font-family: 'Kosugi Maru', sans-serif;
+  background-color: $color-blue;
+}
+p{
+  margin: 0 0 5px 0;
+  @include mq(){
+    font-size: 14px;
+  }
+}
+a{
+  @include mq(){
+    font-size: 12px;
+  }
+}
+h1{
+  font-size: 2em;
+  @include mq(){
+    font-size: 22px;
+  }
+}
+h2{
+  @include mq(){
+    font-size: 16px;
+  }
+}
+
+input[type="text"],input[type="password"]{
+  border-radius: 5px;
+  border: 1px solid rgb(180, 178, 178);
+  width: 60%;
+  padding: 3px 5px;
+}
+input{
+  &:focus{
+    outline: none;
+  }
+}
+
+::placeholder{
+  color:rgb(156, 156, 156);
+}
+
+.select1,.select2,.select3{
+  color:rgb(156, 156, 156);
+}
+.black{
+  color: black;
+}
+
+.inner{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@mixin btn($background: $color-blue,$color: $color-white){
+  background-color: $background;
+  color: $color;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.diary-editing-textarea{
+  margin: auto;
+  width: 80%;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@import "_header";
+
+@import "_cardList";
+
+@import "_footer";
+
+@import "_single";
+
+@import "_writing";
+
+@import "_login";
+
+@import "_registration";
+
+@import "_album";
+
+@import "_pager";
+
+@import "_profile";
+
+@import "_profileChange";
